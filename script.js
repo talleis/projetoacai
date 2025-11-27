@@ -76,13 +76,3 @@ document.getElementById("confirmarPedidoBtn").addEventListener("click", function
     if (form) form.submit();
 });
 
-function abrirModal(id) {
-    const modal = document.getElementById(id);
-    if (modal) modal.style.display = "block";
-}
-
-
-function fecharModal(id) {
-    const modal = document.getElementById(id);
-    if (modal) modal.style.display = "none";
-}

@@ -2,6 +2,7 @@
 session_start();
 include_once('./conexao.php');
 
+
 $tamanho = $_POST['tamanho'] ?? '';
 $adicional = $_POST['adicional'] ?? '';
 $celular  = $_POST['celular'] ?? '';
@@ -31,8 +32,11 @@ $sql = "INSERT INTO pedidos (nome, tamanho, adicional, complemento, celular, val
         VALUES ('$nome','$tamanho', '$adicional', '$complementoss', '$celular', $valorTotal, '$endereco', '$numero', '$bairro', '$obs')";
 
 if ($conexao->query($sql) === TRUE) {
- 
-    echo "Pedido criado com sucesso!<br>";
+
+
+(!isset($_SESSION['celular'])); 
+(header("Location: index.php"));
+
     include "pontos.php";
      header("Location: home.php");
 } else {
@@ -41,4 +45,5 @@ if ($conexao->query($sql) === TRUE) {
 
 $conexao->close();
 ?>
+
 

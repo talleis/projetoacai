@@ -172,7 +172,7 @@
                         <label for="obs">obs:</label><br>
                         <label><input type="text" id="obs" name="obs" required></label><br>
                         <br>
-                        <button type="submit">Finalizar Compra</button>
+                        <button onclick="abrirModal('modal-confirmacao')">Confirmar</button>
                     </form>
                 </div>
             </div>
