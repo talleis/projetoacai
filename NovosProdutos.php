@@ -13,11 +13,15 @@
 <div class="faixaNovosProdutos">
     <P><span>NOVOS PRODUTOS</span> </P>
     <form action="uploadProduto.php" method="POST" enctype="multipart/form-data">
-        <input type="file" name="imagem" accept="image/*" required>
-        <button type="submmit">Enviar Imagem</button>
-        <P>Descrição do Produto</P>
-        <label><input type="text" id="descricao" name="descricao" required></label><br>
-        <button type="submmit">Enviar Descricão</button>
+        <div class="descricao">
+            <P>Descrição do Produto</P>
+            <textarea id="descricao" name="descricao"></textarea>
+        </div>
+        <div class="enviardescricao">
+            <button type="submmit">Enviar Descricão</button><br>
+            <input type="file" name="imagem" accept="image/*" required><br>
+            <button type="submmit">Enviar Imagem</button>
+        </div>
 </div>
 <div class="pedidosLista">
     <div class="pedidos" style="display: flex; flex-direction: column;">
