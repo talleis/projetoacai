@@ -5,8 +5,9 @@ body {
   background-image: url("imagens/backgroudacai.jpg.jpg");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: auto;
   color: rgb(246, 247, 248);
+  width: 100%;
 }
 
 /* Header */

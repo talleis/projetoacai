@@ -4,7 +4,7 @@ include_once('./conexao.php');
 $id = $_POST['id_pedido'];
 $status = $_POST['status'];
 
-$sql = "UPDATE pedidos SET status = $status WHERE id = $id";
+$sql = "UPDATE pedidos SET `status` = $status WHERE id = $id";
 
 if ($conexao->query($sql) === TRUE) {
     header("Location: gerencial.php");

@@ -20,13 +20,13 @@
         <div class="enviardescricao">
             <button type="submmit">Enviar Descricão</button><br>
             <input type="file" name="imagem" accept="image/*" required><br>
-            <button type="submmit">Enviar Imagem</button>
+            <button type="submit">Enviar Imagem</button>
         </div>
+    </form>
 </div>
 <div class="pedidosLista">
     <div class="pedidos" style="display: flex; flex-direction: column;">
         <p>EXEMPLO</p>
         <div class="pedidositem">
-            <?php include_once('uploadProduto.php') ?>
         </div>
     </div>
