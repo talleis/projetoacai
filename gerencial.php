@@ -50,3 +50,6 @@ session_start();
         <h2>🛒 gerenciamento de pedidos</h2>
     </div>
     <?php include_once('gerencialPedidos.php'); ?>
+    <div class="incluirProdutos">
+        <?php include_once('NovosProdutos.php'); ?>
+    </div>

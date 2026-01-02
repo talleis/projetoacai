@@ -5,8 +5,9 @@ body {
   background-image: url("imagens/backgroudacai.jpg.jpg");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: auto;
   color: rgb(246, 247, 248);
+  width: 100%;
 }
 
 /* Header */
@@ -262,6 +263,7 @@ button[type="submit"] {
   justify-content: flex-start;
   align-items: flex-start;
 }
+
 .pedidos p {
   font-weight: bold;
   font-size: 1.2em;
@@ -272,19 +274,65 @@ button[type="submit"] {
 
 .pedidos {
   color: black;
-  padding: 5px; 
+  padding: 5px;
   height: auto;
   display: flex;
   flex-direction: column;
-  height: 100%;   
+  height: 100%;
 }
+
 .pedidositem {
   width: 290px;
   height: 100%;
   padding: 18px;
   margin: 0px 0;
   border-radius: 10px;
-  background: rgba(255,255,255,0.3);
+  background: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(3px);
-  box-shadow: 0 0 6px rgba(0,0,0,0.15);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+}
+
+.faixaNovosProdutos {
+  background-color:#470349;;
+  border: 2px solid #000000;
+  border-radius: 0px;
+  padding: 20px;
+  margin: 0px auto;
+  text-align: left;
+  max-width: 100%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.faixaNovosProdutos span {
+  color: hsl(59, 100%, 50%);
+  font-size: 60px
+}
+
+.faixaNovosProdutos button {
+  background-color: #6a1b9a;
+  color: white;
+  padding: 5px;
+  width: 115px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+
+}
+
+.faixaNovosProdutos p {
+  flex-direction: flex;
+  margin: 5px;
+  font-size: 30px;
+  color: aqua
+}
+
+.descricao input {
+  font-size: 13px;
+  line-height: 18px;
+  color: #808080;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px; 
 }

@@ -1,9 +1,10 @@
 <?php
-session_start();
+
 include_once('./conexao.php');
 
 if (!isset($_SESSION['celular'])) {
-    die("Erro: usuário não identificado!");
+    die(header("Location: index.php"));
+        #"Erro: usuário não identificado!"#
 }
 
 $usuario_celular = $_SESSION['celular']; 

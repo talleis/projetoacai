@@ -76,13 +76,35 @@ document.getElementById("confirmarPedidoBtn").addEventListener("click", function
     if (form) form.submit();
 });
 
-function abrirModal(id) {
-    const modal = document.getElementById(id);
-    if (modal) modal.style.display = "block";
-}
+document.querySelector("button[onclick=\"abrirModal('modal-confirmacao')\"]")
+    .addEventListener("click", function (e) {
+        e.preventDefault(); // evita submit
 
+        const modalId = detectarModalAberto();
+        if (!modalId) return alert("Erro: Nenhum modal aberto para confirmar");
 
-function fecharModal(id) {
-    const modal = document.getElementById(id);
-    if (modal) modal.style.display = "none";
-}
+        // 1. PEGAR OS VALORES DO MODAL ATUAL
+        const tamanho = document.querySelector(`#${modalId} select[name='tamanho']`);
+        const complementos = document.querySelectorAll(`#${modalId} input[name='complementos']:checked`);
+        const adicionais = document.querySelectorAll(`#${modalId} input[name='adicional']:checked`);
+
+        const preco = calcularPreco(modalId);
+
+        // 2. MONTAR OS TEXTOS PARA O MODAL DE CONFIRMAÇÃO
+        document.getElementById("conf-tamanho").innerText = tamanho ? tamanho.options[tamanho.selectedIndex].text : "-";
+
+        document.getElementById("conf-complementos").innerText =
+            complementos.length > 0
+                ? [...complementos].map(c => c.value).join(", ")
+                : "Nenhum";
+
+        document.getElementById("conf-adicionais").innerText =
+            adicionais.length > 0
+                ? [...adicionais].map(a => a.value).join(", ")
+                : "Nenhum";
+
+        document.getElementById("conf-preco").innerText = preco;
+
+        // 3. ABRIR MODAL
+        abrirModal("modal-confirmacao");
+    });
