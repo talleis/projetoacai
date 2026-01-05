@@ -7,6 +7,7 @@ $banco= "projetoacai";
 
 
 
+
 $conexao = mysqli_connect($host, $usuario, $senha, $banco);
 if (!$conexao) {
     

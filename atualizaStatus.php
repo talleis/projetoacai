@@ -13,5 +13,3 @@ if ($conexao->query($sql) === TRUE) {
     echo "Erro: " . $conexao->error;
 }
 $conexao->close();
-
-?>

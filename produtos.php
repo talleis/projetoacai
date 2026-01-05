@@ -41,7 +41,7 @@
                             <label><input type="checkbox" name="complemento" value="Morango"> Morango</label><br>
                             <label><input type="checkbox" name="complemento" value="Leite Condensado"> Leite Condensado</label><br><br>
                             <p> Adicional </p>
-                             <label><input type="radio" name="adicional" value="Nenhum" data-preco="0.00"> Nenhum - R$0,00</label><br>
+                            <label><input type="radio" name="adicional" value="Nenhum" data-preco="0.00"> Nenhum - R$0,00</label><br>
                             <label><input type="radio" name="adicional" value="Creme de Nutella" data-preco="5.00"> Creme de Nutella - R$5,00</label><br>
                             <label><input type="radio" name="adicional" value="Creme de Ninho" data-preco="5.00"> Creme de Ninho - R$5,00</label><br><br>
                             <P>Endereço de entrega</P>
@@ -140,7 +140,8 @@
             <img src="imagens/tradicional.jpg" alt="acaiTradicional" width="300px" height="300px">
             <h3>Açaí Tradicional</h3>
             <p>Se delicie com um saboroso e refrescante açaí: o mais completo do mercado</p><br><br>
-            <br><br><p> Monte seu açaí a partir de R$ 10,99 </p>
+            <br><br>
+            <p> Monte seu açaí a partir de R$ 10,99 </p>
             <button onclick="abrirModal('modal-acaitradicional')">Selecione</button>
             <div id="modal-acaitradicional" class="modal">
                 <div class="modal-conteudo">
