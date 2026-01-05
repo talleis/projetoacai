@@ -41,6 +41,7 @@
                             <label><input type="checkbox" name="complemento" value="Morango"> Morango</label><br>
                             <label><input type="checkbox" name="complemento" value="Leite Condensado"> Leite Condensado</label><br><br>
                             <p> Adicional </p>
+                             <label><input type="radio" name="adicional" value="Nenhum" data-preco="0.00"> Nenhum - R$0,00</label><br>
                             <label><input type="radio" name="adicional" value="Creme de Nutella" data-preco="5.00"> Creme de Nutella - R$5,00</label><br>
                             <label><input type="radio" name="adicional" value="Creme de Ninho" data-preco="5.00"> Creme de Ninho - R$5,00</label><br><br>
                             <P>Endereço de entrega</P>

@@ -32,9 +32,7 @@ $sql = "INSERT INTO pedidos (nome, tamanho, adicional, complemento, celular, val
         VALUES ('$nome','$tamanho', '$adicional', '$complementoss', '$celular', $valorTotal, '$endereco', '$numero', '$bairro', '$obs')";
 
 if ($conexao->query($sql) === TRUE) {
-
-
-(!isset($_SESSION['celular'])); 
+(!isset($_SESSION['celular']));  
 (header("Location: index.php"));
 
     include "pontos.php";
