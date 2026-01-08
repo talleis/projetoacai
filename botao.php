@@ -11,6 +11,4 @@
         <input type="hidden" name="status" value="3">
         <button type="submit">Recusar</button>
     </form>
-
-
 </div>
