@@ -65,7 +65,7 @@
 
         <!-- Produto Brownie -->
         <div class="produto">
-            <img src="imagens/brownies.jpg.png" alt="Brownie Tradicional">
+            <img src="imagens/brownies.png" alt="Brownie Tradicional">
             <h3>Brownie Tradicional</h3>
             <p>Brownie macio com cobertura de chocolate meio amargo
                 Complementos: chantilly, morango, calda de chocolate
