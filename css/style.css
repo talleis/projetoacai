@@ -1,0 +1,244 @@
+@import url(header.css);
+@import url(produto.css);
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("../imagens/backgroudacai.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: auto;
+  color: rgb(246, 247, 248);
+  width: 100%;
+}
+
+/* Header */
+
+
+
+
+/* Botão de cadastro */
+.cadastro-botao button {
+  background-color: #6a1b9a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 200px;
+  height: 50px;
+  font-size: 32px;
+  margin-right: 25px;
+ 
+}
+
+/* Faixa de destaque */
+.faixa-destaque {
+  background-color: rgba(137, 13, 94, 0.497);
+  border: 2px solid #fff;
+  border-radius: 0px;
+  padding: 20px;
+  margin: 0px auto;
+  text-align: center;
+  max-width: 100%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.faixa-destaque h2 {
+  color: #efc015;
+  font-size: 2em;
+  margin: 0;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Seções */
+
+
+.linha-produtos {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-content: space-around;
+  flex-wrap: wrap;
+}
+
+.complementos-acai {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgba(125, 54, 111, 0.9);
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  max-width: 300px;
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+}
+
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-conteudo {
+  background-color: #470349;
+  margin: 10% auto;
+  padding: 10px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 400px;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.fechar {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+button[type="submit"] {
+  background-color: #ff4081;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn[type="submit"] {
+  background-color: #ff4081;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.topo2 {
+  display: flex;
+  gap: 0px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button2[type="submit"] {
+  background-color: #0c0c0c;
+  margin-right: 1px;
+  color: white;
+  padding: 0px 0px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+
+}
+
+.pedidosLista {
+  background-color: rgba(251, 251, 251, 0.8);
+  border: 1px solid #d534d8;
+  border-radius: 10px;
+  padding: 0px;
+  max-width: 350px;
+  margin: 5PX;
+  color: black;
+  display: flex;
+  overflow-y: auto;
+  max-height: 600px;
+  min-height: 600px;
+  height: 100%;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.pedidos p {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: blueviolet;
+  justify-content: center;
+}
+
+.pedidos {
+  color: black;
+  padding: 5px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.pedidositem {
+  width: 290px;
+  height: 100%;
+  padding: 18px;
+  margin: 0px 0;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(3px);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+}
+
+.faixaNovosProdutos {
+  background-color:#470349;;
+  border: 2px solid #000000;
+  border-radius: 0px;
+  padding: 20px;
+  margin: 0px auto;
+  text-align: left;
+  max-width: 100%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.faixaNovosProdutos span {
+  color: hsl(59, 100%, 50%);
+  font-size: 60px
+}
+
+.faixaNovosProdutos button {
+  background-color: #6a1b9a;
+  color: white;
+  padding: 5px;
+  width: 115px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+
+}
+
+.faixaNovosProdutos p {
+  flex-direction: flex;
+  margin: 5px;
+  font-size: 30px;
+  color: aqua
+}
+
+.descricao input {
+  font-size: 13px;
+  line-height: 18px;
+  color: #808080;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px; 
+}
