@@ -9,7 +9,7 @@ session_start();
 <head>
   <meta charset="UTF-8">
   <title>Açai_mania</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
@@ -28,8 +28,8 @@ session_start();
         </div>
       </div>
     </div>
-    <div>
-      <h2> O Melhor e mais delicioso Açaí da Região </h2>
+    <div class="mania">
+      <h2> A MANIA DE SER O <span>MELHOR</span></h2>
     </div>
 
   </header>

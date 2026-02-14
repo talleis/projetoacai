@@ -15,12 +15,15 @@
 
         <!-- Produto Açaí -->
         <div class="produto">
-            <img src="imagens/ninhotela.jpg.jpeg" alt="Ninhotela" width="300px" height="300px">
+            <img src="imagens/ninhotela.jpg.jpeg" alt="Ninhotela">
             <h3>Ninhotella</h3>
-            <p>Prove nosso copo premium com creme ninho e nutella</p>
-            <p>Complementos: açaí, creme de nutella, creme de ninho, frutas</p><br>
-            <p> Monte seu açaí a partir de R$ 20,99 </p>
-            <button onclick="abrirModal('modal-acai')">Selecione</button>
+            <p>Prove nosso copo premium com creme ninho e nutella
+               Complementos: açaí, creme de nutella, creme de ninho, frutas
+               Monte seu açaí a partir de R$ 20,99 
+            </p>
+            <div class="button">
+                <button onclick="abrirModal('modal-acai')">Selecione</button>
+            </div>
             <div id="modal-acai" class="modal">
                 <div class="modal-conteudo">
                     <span class="fechar" onclick="fecharModal('modal-acai')">&times;</span>
@@ -62,12 +65,14 @@
 
         <!-- Produto Brownie -->
         <div class="produto">
-            <img src="imagens/brownies.jpg.png" alt="Brownie Tradicional" width="300px" height="300px">
+            <img src="imagens/brownies.png" alt="Brownie Tradicional">
             <h3>Brownie Tradicional</h3>
-            <p>Brownie macio com cobertura de chocolate meio amargo</p>
-            <p>Complementos: chantilly, morango, calda de chocolate</p><br>
-            <p> R$ 49,99 </p>
-            <button onclick="abrirModal('modal-brownie')">Selecione</button>
+            <p>Brownie macio com cobertura de chocolate meio amargo
+                Complementos: chantilly, morango, calda de chocolate
+                R$ 49,99</p>
+            <div class="button">
+                <button onclick="abrirModal('modal-acai')">Selecione</button>
+            </div>
             <div id="modal-brownie" class="modal">
                 <div class="modal-conteudo">
                     <span class="fechar" onclick="fecharModal('modal-brownie')">&times;</span>
@@ -101,10 +106,12 @@
         <div class="produto">
             <img src="imagens/barca.jpg.png" alt="Barca açai" width="300px" height="300px">
             <h3>Barca açaí 1,5 litros</h3>
-            <p>Esta incrível barca vai com tudo de mais incrível pra você e sua companhia aproveitar ao máximo</p>
-            <p>Complementos: todos os complementos disponíveis.</p>
-            <p> R$ 49,99 </p>
-            <button onclick="abrirModal('modal-barca')">Selecione</button>
+            <p>Esta incrível barca vai com tudo de mais incrível pra você e sua companhia aproveitar ao máximo
+               Complementos: todos os complementos disponíveis.
+               R$ 49,99 </p>
+            <div class="button">
+                <button onclick="abrirModal('modal-acai')">Selecione</button>
+            </div>
             <div id="modal-barca" class="modal">
                 <div class="modal-conteudo">
                     <span class="fechar" onclick="fecharModal('modal-barca')">&times;</span>
@@ -139,10 +146,11 @@
         <div class="produto">
             <img src="imagens/tradicional.jpg" alt="acaiTradicional" width="300px" height="300px">
             <h3>Açaí Tradicional</h3>
-            <p>Se delicie com um saboroso e refrescante açaí: o mais completo do mercado</p><br><br>
-            <br><br>
-            <p> Monte seu açaí a partir de R$ 10,99 </p>
-            <button onclick="abrirModal('modal-acaitradicional')">Selecione</button>
+            <p>Se delicie com um saboroso e refrescante açaí: o mais completo do mercado
+             Monte seu açaí a partir de R$ 10,99 </p>
+            <div class="button">
+                <button onclick="abrirModal('modal-acai')">Selecione</button>
+            </div>
             <div id="modal-acaitradicional" class="modal">
                 <div class="modal-conteudo">
                     <span class="fechar" onclick="fecharModal('modal-acaitradicional')">&times;</span>

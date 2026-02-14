@@ -30,6 +30,7 @@ if (!isset($_SESSION['nome']) && isset($_COOKIE['login_token'])) {
     <meta charset="UTF-8">
     <title>Açaí Mania</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icone" href="favicon.png" />
 </head>
 
 <body>
@@ -39,13 +40,11 @@ if (!isset($_SESSION['nome']) && isset($_COOKIE['login_token'])) {
                 <img src="imagens/logo.jpg.jpg" alt="Logo Açaí">
                 <h1>Açaí Mania</h1>
             </div>
-
-            <!-- Botões do topo -->
             <div>
                 <?php if (isset($_SESSION['nome'])): (isset($_SESSION['pontos'])); ?>
 
-                    <div style="display: flex; flex-direction:column;">
-                        <div style="display: flex; flex-direction:row; align-items: center;gap: 10px; justify-content: flex-end;">
+                    <div class="menu">
+                        <div class="text-menu">
                             <p>Bem-vindo, <strong><?php echo $_SESSION['nome']; ?></strong>!</p>
                             <a href="logout.php"><button class="botaosair">Sair</button></a>
                         </div>
