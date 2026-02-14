@@ -12,7 +12,7 @@ session_start();
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
+<body class="global">
   <header>
     <div class="topo">
       <div class="logo">

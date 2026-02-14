@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Açai_mania</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <section id="produtos">
     <div class="linha-produtos">
