@@ -32,17 +32,16 @@
                         <input type="hidden" name="nome" value="Ninhotella">
                         <label><input type="text" id="celular" name="celular" required></label><br>
                         <h2>Monte se Açai</h2>
-                        <form id="form-acai">
                             <p> Escolha o tamanho:</p>
                             <label><input type="radio" name="tamanho" value="300ml" data-preco="20.99"> 300ml - R$20,99</label><br>
                             <label><input type="radio" name="tamanho" value="500ml" data-preco="28.99"> 500ml - R$28,99</label><br>
                             <label><input type="radio" name="tamanho" value="700ml" data-preco="34.99"> 700ml - R$34,99</label><br><br>
                             <p> Escolha os complementos:</p>
-                            <label><input type="checkbox" name="complemento" value="Leite Ninho"> Leite Ninho</label><br>
-                            <label><input type="checkbox" name="complemento" value="Paçoca"> Paçoca</label><br>
-                            <label><input type="checkbox" name="complemento" value="Granola"> Granola</label><br>
-                            <label><input type="checkbox" name="complemento" value="Morango"> Morango</label><br>
-                            <label><input type="checkbox" name="complemento" value="Leite Condensado"> Leite Condensado</label><br><br>
+                            <label><input type="checkbox" name="complemento[]" value="Leite Ninho"> Leite Ninho</label><br>
+                            <label><input type="checkbox" name="complemento[]" value="Paçoca"> Paçoca</label><br>
+                            <label><input type="checkbox" name="complemento[]" value="Granola"> Granola</label><br>
+                            <label><input type="checkbox" name="complemento[]" value="Morango"> Morango</label><br>
+                            <label><input type="checkbox" name="complemento[]" value="Leite Condensado"> Leite Condensado</label><br><br>
                             <p> Adicional </p>
                             <label><input type="radio" name="adicional" value="Nenhum" data-preco="0.00"> Nenhum - R$0,00</label><br>
                             <label><input type="radio" name="adicional" value="Creme de Nutella" data-preco="5.00"> Creme de Nutella - R$5,00</label><br>
@@ -53,7 +52,7 @@
                             <label for="bairro">Bairro:</label><br>
                             <label><input type="text" id="bairro" name="bairro" required></label><br>
                             <label for="numero">numero:</label><br>
-                            <label><input type="numero" id="numero" name="numero" required></label><br>
+                            <label><input type="number" id="numero" name="numero" required></label><br>
                             <label for="obs">obs:</label><br>
                             <label><input type="text" id="obs" name="obs" required></label><br>
                             <br>
@@ -104,7 +103,7 @@
 
         <!-- Produto Barca -->
         <div class="produto">
-            <img src="imagens/barca.jpg.png" alt="Barca açai" width="300px" height="300px">
+            <img src="imagens/barca.jpg.png" alt="Barca açai">
             <h3>Barca açaí 1,5 litros</h3>
             <p>Esta incrível barca vai com tudo de mais incrível pra você e sua companhia aproveitar ao máximo
                Complementos: todos os complementos disponíveis.

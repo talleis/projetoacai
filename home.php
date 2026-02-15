@@ -29,7 +29,7 @@ if (!isset($_SESSION['nome']) && isset($_COOKIE['login_token'])) {
 <head>
     <meta charset="UTF-8">
     <title>Açaí Mania</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="icone" href="favicon.png" />
 </head>
 

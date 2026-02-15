@@ -9,10 +9,11 @@ session_start();
 <head>
   <meta charset="UTF-8">
   <title>Açai_mania</title>
-  <link rel="stylesheet" href="./css/style.css">
+
 </head>
 
-<body class="global">
+<body>
+   <link rel="stylesheet" href="./css/style.css">
   <header>
     <div class="topo">
       <div class="logo">
