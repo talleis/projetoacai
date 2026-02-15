@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Mostrar Pedidos</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>

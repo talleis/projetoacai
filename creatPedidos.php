@@ -1,7 +1,11 @@
 <?php
+
 session_start();
 include_once('./conexao.php');
-
+echo "<pre>";
+var_dump($_POST);
+echo "</pre>";
+exit;
 
 $tamanho = $_POST['tamanho'] ?? '';
 $adicional = $_POST['adicional'] ?? '';
@@ -25,17 +29,19 @@ $valorTotal = $valor + $adicionalValor + $preco;
 $complementos = $_POST['complemento'] ?? [];
 if (!is_array($complementos)) {
     $complementos = [$complementos];
-}
-$complementoss = implode(", ", $complementos);
+    }
+    $complementoss = implode(", ", $complementos);
+    
+  echo  var_dump($_POST);
 
-$sql = "INSERT INTO pedidos (nome, tamanho, adicional, complemento, celular, valor, endereco, numero, bairro, obs) 
+$sql = "INSERT INTO pedidos (nome, tamanho, adicional, complemento, celular, valor, endereco, numero, bairro, obs, status) 
         VALUES ('$nome','$tamanho', '$adicional', '$complementoss', '$celular', $valorTotal, '$endereco', '$numero', '$bairro', '$obs')";
 
 if ($conexao->query($sql) === TRUE) {
     (!isset($_SESSION['celular']));
     (header("Location: index.php"));
 
-    /*include "pontos.php";*/
+    include "pontos.php";*/
     header("Location: home.php");
 } else {
     echo "Erro: " . $conexao->error;

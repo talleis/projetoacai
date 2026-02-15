@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Gerencial</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <div class="faixaNovosProdutos">
     <P><span>NOVOS PRODUTOS</span> </P>
