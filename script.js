@@ -1,110 +1,116 @@
-
 function abrirModal(id) {
-    const modal = document.getElementById(id);
-    if (modal) modal.style.display = "block";
+  const modal = document.getElementById(id);
+  if (modal) modal.style.display = "block";
 }
-
 
 function fecharModal(id) {
-    const modal = document.getElementById(id);
-    if (modal) modal.style.display = "none";
+  const modal = document.getElementById(id);
+  if (modal) modal.style.display = "none";
 }
 
-
-const PRECO_ADICIONAL = 5; 
+const PRECO_ADICIONAL = 5;
 const PRECO_BARCA = 49.99;
-const PRECO_BROWNIE = 12.00;
-
+const PRECO_BROWNIE = 12.0;
 
 function detectarModalAberto() {
-    const modais = ["modal-acai", "modal-brownie", "modal-barca", "modal-acaitradicional"];
-    for (let id of modais) {
-        const modal = document.getElementById(id);
-        if (modal && modal.style.display === "block") return id;
-    }
-    return null;
+  const modais = [
+    "modal-acai",
+    "modal-brownie",
+    "modal-barca",
+    "modal-acaitradicional",
+  ];
+  for (let id of modais) {
+    const modal = document.getElementById(id);
+    if (modal && modal.style.display === "block") return id;
+  }
+  return null;
 }
 
 function calcularPreco(modalId) {
-    let total = 0;
+  let total = 0;
 
-    if (modalId === "modal-acai") {
-        const tamanho = document.querySelector("#modal-acai select[name='tamanho']");
-        const adicional = document.querySelector("#modal-acai input[name='adicional']");
+  if (modalId === "modal-acai") {
+    const tamanho = document.querySelector(
+      "#modal-acai input[name='tamanho']:checked",
+    );
+    const adicional = document.querySelector(
+      "#modal-acai input[name='adicional']:checked",
+    );
+    if (tamanho) total += parseFloat(tamanho.dataset.preco || 0);
+    if (adicional) total += parseFloat(adicional.dataset.preco || 0);
+  }
 
-        if (tamanho) total += parseFloat(tamanho.value);
-        if (adicional && adicional.checked) total += PRECO_ADICIONAL;
-    }
+  if (modalId === "modal-acaitradicional") {
+    const tamanho = document.querySelector(
+      "#modal-acaitradicional select[name='tamanho']",
+    );
+    if (tamanho) total += parseFloat(tamanho.value);
+  }
 
-    if (modalId === "modal-acaitradicional") {
-        const tamanho = document.querySelector("#modal-acaitradicional select[name='tamanho']");
-        if (tamanho) total += parseFloat(tamanho.value);
-    }
+  if (modalId === "modal-brownie") {
+    total += PRECO_BROWNIE;
+    const adicional = document.querySelector(
+      "#modal-brownie input[name='adicional']:checked",
+    );
+    if (adicional) total += PRECO_ADICIONAL;
+  }
 
-    if (modalId === "modal-brownie") {
-        total += PRECO_BROWNIE;
-        const adicional = document.querySelector("#modal-brownie input[name='adicional']");
-        if (adicional && adicional.checked) total += PRECO_ADICIONAL;
-    }
+  if (modalId === "modal-barca") {
+    total += PRECO_BARCA;
+    const adicional = document.querySelector(
+      "#modal-barca input[name='adicional']:checked",
+    );
+    if (adicional) total += PRECO_ADICIONAL;
+  }
 
-    if (modalId === "modal-barca") {
-        total += PRECO_BARCA;
-        const adicional = document.querySelector("#modal-barca input[name='adicional']");
-        if (adicional && adicional.checked) total += PRECO_ADICIONAL;
-    }
-
-    return total.toFixed(2);
+  return total.toFixed(2);
 }
 
-document.addEventListener("click", function (e) {
-    if (!e.target.classList.contains("btn-finalizar")) return;
+document.addEventListener("DOMContentLoaded", function () {
+  document
+    .querySelectorAll("form[action='creatPedidos.php']")
+    .forEach((form) => {
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
 
-    const modalId = e.target.getAttribute("data-modal");
-    const preco = calcularPreco(modalId);
+        const tamanho =
+          this.querySelector('input[name="tamanho"]:checked')?.value ||
+          "não escolhido";
+        const adicional =
+          this.querySelector('input[name="adicional"]:checked')?.value ||
+          "nenhum";
 
-    document.getElementById("valorFinal").innerText = preco;
+        const complementos =
+          [...this.querySelectorAll('input[name="complemento[]"]:checked')]
+            .map((el) => el.value)
+            .join(", ") || "nenhum";
 
-   
-    abrirModal("modal-confirmar");
-});
+        const precoTamanho =
+          this.querySelector('input[name="tamanho"]:checked')?.dataset.preco ||
+          0;
+        const precoAdicional =
+          this.querySelector('input[name="adicional"]:checked')?.dataset
+            .preco || 0;
 
-document.getElementById("confirmarPedidoBtn").addEventListener("click", function () {
-    const modalId = detectarModalAberto();
-    if (!modalId) return alert("Erro: Nenhum modal detectado.");
+        const total = (
+          parseFloat(precoTamanho) + parseFloat(precoAdicional)
+        ).toFixed(2);
 
-    const form = document.querySelector(`#${modalId} form`);
-    if (form) form.submit();
-});
+        const resumo = `
+Resumo do pedido:
 
-document.querySelector("button[onclick=\"abrirModal('modal-confirmacao')\"]")
-    .addEventListener("click", function (e) {
-        e.preventDefault(); // evita submit
+Tamanho: ${tamanho}
+Adicional: ${adicional}
+Complementos: ${complementos}
 
-        const modalId = detectarModalAberto();
-        if (!modalId) return alert("Erro: Nenhum modal aberto para confirmar");
+Total: R$ ${total}
 
-        // 1. PEGAR OS VALORES DO MODAL ATUAL
-        const tamanho = document.querySelector(`#${modalId} select[name='tamanho']`);
-        const complementos = document.querySelectorAll(`#${modalId} input[name='complementos']:checked`);
-        const adicionais = document.querySelectorAll(`#${modalId} input[name='adicional']:checked`);
+Confirmar pedido?
+`;
 
-        const preco = calcularPreco(modalId);
-
-        // 2. MONTAR OS TEXTOS PARA O MODAL DE CONFIRMAÇÃO
-        document.getElementById("conf-tamanho").innerText = tamanho ? tamanho.options[tamanho.selectedIndex].text : "-";
-
-        document.getElementById("conf-complementos").innerText =
-            complementos.length > 0
-                ? [...complementos].map(c => c.value).join(", ")
-                : "Nenhum";
-
-        document.getElementById("conf-adicionais").innerText =
-            adicionais.length > 0
-                ? [...adicionais].map(a => a.value).join(", ")
-                : "Nenhum";
-
-        document.getElementById("conf-preco").innerText = preco;
-
-        // 3. ABRIR MODAL
-        abrirModal("modal-confirmacao");
+        if (confirm(resumo)) {
+          this.submit();
+        }
+      });
     });
+});

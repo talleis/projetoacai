@@ -1,7 +1,10 @@
 <?php
 include_once('./conexao.php');
 
-$sql = "SELECT * FROM pedidos WHERE `status` = 1";
+$sql = "SELECT * FROM pedidos 
+        WHERE `status` = 1 
+        ORDER BY id DESC";
+
 $result = $conexao->query($sql);
 if ($result->num_rows > 0) {
     while ($pedido = $result->fetch_assoc()) {

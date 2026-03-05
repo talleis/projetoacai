@@ -13,8 +13,9 @@ if (!$conexao) {
     
     die("Conexão falhou: " . mysqli_connect_error());
 }
+/*
   if ($conexao){ 
   var_dump($conexao);
     die("Conexão realizada com sucesso: " . mysqli_connect_error());
             
-}
+}*/

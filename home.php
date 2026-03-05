@@ -49,10 +49,37 @@ if (!isset($_SESSION['nome']) && isset($_COOKIE['login_token'])) {
                             <a href="logout.php"><button class="botaosair">Sair</button></a>
                         </div>
                         <div>
+                                                        <!-- No menu ou onde preferir -->
+                            <a href="ver_minhas_comissoes.php" style="background: #4CAF50; color: white; padding: 10px; text-decoration: none; border-radius: 5px;">
+                                💰 Minhas Comissões
+                            </a>
                             <p class="pontos">Seus Maniacoin
                                 <img src=imagens/coinacai.jpg.png alt="coin acai" width="30px" height="30px">
                                 <strong><?php echo $_SESSION['pontos'] ?></strong>
                         </div>
+                                                        <!-- Coloque isso onde quiser no seu home.php -->
+                                <div class="menu-indicacao">
+                                    <a href="meulink.php" class="btn-indicacao">
+                                        🔗 Meu Link de Indicação
+                                    </a>
+                                </div>
+
+                                <!-- CSS para o botão (adicione no seu style.css) -->
+                                <style>
+                                .btn-indicacao {
+                                    display: inline-block;
+                                    padding: 10px 20px;
+                                    background: #4CAF50;
+                                    color: white;
+                                    text-decoration: none;
+                                    border-radius: 5px;
+                                    font-weight: bold;
+                                    margin: 10px;
+                                }
+                                .btn-indicacao:hover {
+                                    background: #45a049;
+                                }
+                                </style>
                         </p>
                     </div>
                 <?php else: ?>

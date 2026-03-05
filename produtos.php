@@ -27,11 +27,11 @@
             <div id="modal-acai" class="modal">
                 <div class="modal-conteudo">
                     <span class="fechar" onclick="fecharModal('modal-acai')">&times;</span>
-                    <form action="creatPedidos.php" method="post">
+                    <form id="formPedido" action="creatPedidos.php" method="post">
                         <label for="celular">celular:</label><br>
                         <input type="hidden" name="nome" value="Ninhotella">
                         <label><input type="text" id="celular" name="celular" required></label><br>
-                        <h2>Monte se Açai</h2>
+                        <h2>Monte seu Açai</h2>
                             <p> Escolha o tamanho:</p>
                             <label><input type="radio" name="tamanho" value="300ml" data-preco="20.99"> 300ml - R$20,99</label><br>
                             <label><input type="radio" name="tamanho" value="500ml" data-preco="28.99"> 500ml - R$28,99</label><br>
@@ -55,6 +55,7 @@
                             <label><input type="number" id="numero" name="numero" required></label><br>
                             <label for="obs">obs:</label><br>
                             <label><input type="text" id="obs" name="obs" required></label><br>
+                            <p>entrega gratuita</p>
                             <br>
                             <button type="submit">Finalizar Compra</button>
                         </form>
@@ -75,7 +76,7 @@
             <div id="modal-brownie" class="modal">
                 <div class="modal-conteudo">
                     <span class="fechar" onclick="fecharModal('modal-brownie')">&times;</span>
-                    <form action="creatPedidos.php" method="post">
+                   <form id="formPedido" action="creatPedidos.php" method="post">
                         <label for="celular">celular:</label><br>
                         <label><input type="text" id="celular" name="celular" required></label><br>
                         <input type="hidden" name="nome" value="Brownie">
@@ -95,6 +96,7 @@
                             <label for="obs">obs:</label><br>
                             <label><input type="text" id="obs" name="obs" required></label><br>
                             <br>
+                            <p>entrega gratuita</p>
                             <button type="submit">Finalizar Compra</button>
                         </form>
                 </div>
@@ -115,7 +117,7 @@
                 <div class="modal-conteudo">
                     <span class="fechar" onclick="fecharModal('modal-barca')">&times;</span>
                     <h2>Escolha os complemetos</h2>
-                    <form action="creatPedidos.php" method="post">
+                    <form id="formPedido" action="creatPedidos.php" method="post">
                         <input type="hidden" name="nome" value="Barca 1.5 litros">
                         <input type="hidden" name="preco" value="49.99">
                         <label for="celular">celular:</label><br>
@@ -135,6 +137,7 @@
                         <label for="obs">obs:</label><br>
                         <label><input type="text" id="obs" name="obs" required></label><br>
                         <br>
+                        <p>entrega gratuita</p>
                         <button type="submit">Finalizar Compra</button>
                     </form>
                 </div>
@@ -154,7 +157,7 @@
                 <div class="modal-conteudo">
                     <span class="fechar" onclick="fecharModal('modal-acaitradicional')">&times;</span>
                     <h2>Monte seu Açai</h2>
-                    <form action="creatPedidos.php" method="post">
+                    <form id="formPedido" action="creatPedidos.php" method="post">
                         <input type="hidden" name="nome" value="Tradicional">
                         <label for="celular">celular:</label><br>
                         <label><input type="text" id="celular" name="celular" required></label><br>
@@ -181,6 +184,7 @@
                         <label for="obs">obs:</label><br>
                         <label><input type="text" id="obs" name="obs" required></label><br>
                         <br>
+                        <p>entrega gratuita</p>
                         <button onclick="abrirModal('modal-confirmacao')">Confirmar</button>
                     </form>
                 </div>
