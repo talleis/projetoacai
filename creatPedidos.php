@@ -54,13 +54,13 @@ $complementoss = implode(", ", $complementos);
 
 // Percentuais por nível
 $percentuais = [
-    1 => 0.10, // 10% - indicação direta
-    2 => 0.05, // 5%  - neto
-    3 => 0.03, // 3%  - bisneto
-    4 => 0.02, // 2%  - 4º nível
-    5 => 0.01, // 1%  - 5º nível
-    6 => 0.005, // 0.5% - 6º nível
-    7 => 0.0025 // 0.25% - 7º nível
+    1 => 0.01, 
+    2 => 0.005, 
+    3 => 0.003, 
+    4 => 0.002, 
+    5 => 0.001, 
+    6 => 0.0005, 
+    7 => 0.00025 
 ];
 
 // 1. Buscar o ID do comprador pelo celular

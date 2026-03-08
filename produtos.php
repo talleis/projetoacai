@@ -1,4 +1,9 @@
 <?php
+
+include_once('./conexao.php');
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 ?>
 
 
@@ -22,7 +27,18 @@
                Monte seu açaí a partir de R$ 20,99 
             </p>
             <div class="button">
+                <?php
+               if(isset($_SESSION['celular']) && !empty($_SESSION['celular'])){
+                    // USUÁRIO LOGADO - mostra o botão
+                ?>
                 <button onclick="abrirModal('modal-acai')">Selecione</button>
+                <?php
+                } else {
+                     ?>
+                <button onclick="abrirModal('modal-entrar')">Peça já</button>
+                <?php
+                    }
+                ?>
             </div>
             <div id="modal-acai" class="modal">
                 <div class="modal-conteudo">
@@ -71,7 +87,18 @@
                 Complementos: chantilly, morango, calda de chocolate
                 R$ 49,99</p>
             <div class="button">
+               <?php
+               if(isset($_SESSION['celular']) && !empty($_SESSION['celular'])){
+                    // USUÁRIO LOGADO - mostra o botão
+                ?>
                 <button onclick="abrirModal('modal-acai')">Selecione</button>
+                <?php
+                } else {
+                     ?>
+                <button onclick="abrirModal('modal-entrar')">Peça já</button>
+                <?php
+                    }
+                ?>
             </div>
             <div id="modal-brownie" class="modal">
                 <div class="modal-conteudo">
@@ -111,7 +138,18 @@
                Complementos: todos os complementos disponíveis.
                R$ 49,99 </p>
             <div class="button">
+              <?php
+               if(isset($_SESSION['celular']) && !empty($_SESSION['celular'])){
+                    // USUÁRIO LOGADO - mostra o botão
+                ?>
                 <button onclick="abrirModal('modal-acai')">Selecione</button>
+                <?php
+                } else {
+                      ?>
+                <button onclick="abrirModal('modal-entrar')">Peça já</button>
+                <?php
+                    }
+                ?>
             </div>
             <div id="modal-barca" class="modal">
                 <div class="modal-conteudo">
@@ -151,7 +189,18 @@
             <p>Se delicie com um saboroso e refrescante açaí: o mais completo do mercado
              Monte seu açaí a partir de R$ 10,99 </p>
             <div class="button">
+               <?php
+               if(isset($_SESSION['celular']) && !empty($_SESSION['celular'])){
+                    // USUÁRIO LOGADO - mostra o botão
+                ?>
                 <button onclick="abrirModal('modal-acai')">Selecione</button>
+                <?php
+                } else {
+                     ?>
+                <button onclick="abrirModal('modal-entrar')">Peça já</button>
+                <?php
+                    }
+                ?>
             </div>
             <div id="modal-acaitradicional" class="modal">
                 <div class="modal-conteudo">

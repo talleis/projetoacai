@@ -103,7 +103,7 @@ nav a {
     display: flex;
     flex-direction:row;
     align-items: center;
-    gap: 10px;
+    gap: 35px;
     justify-content: flex-end;
 }
 

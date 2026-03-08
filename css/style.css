@@ -1,5 +1,6 @@
 @import url(produto.css);
 @import url(header.css);
+@import url(home.css);
 
 body {
   font-family: Arial, sans-serif;
@@ -24,8 +25,10 @@ body {
   cursor: pointer;
   align-items: center;
   font-weight: bold;
-  width: fit-content;
+  width: 200px;
+  height: 30px;
   margin-left: auto;
+
 }
 
 /* Botão de cadastro */
@@ -37,6 +40,38 @@ body {
   border-radius: 8px;
   cursor: pointer;
 }
+
+
+.mania{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.contatos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #4caf50;
+    margin: 15px 25px;
+    padding: 0 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+.contatos:hover{
+  background-color:#7dea80 ;
+}
+
+.contatos span{
+   color: white;
+}
+
+
 
 /* Faixa de destaque */
 .faixa-destaque {
@@ -94,13 +129,37 @@ section {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
+.modal-cadastro{
+  background-color: #470349;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  height: 600px;
+  max-width: 400px;
+  color: white;
+  margin-bottom: 1rem;
+}
+
 .modal-conteudo {
+  background-color: #470349;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  height: 800px;
+  max-width: 400px;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.modal-conteudo-entrar {
   background-color: #470349;
   margin: 10% auto;
   padding: 10px;
   border-radius: 10px;
-  width: 80%;
-  max-width: 400px;
+  width:340px;
+  height:350px;
   color: white;
   margin-bottom: 1rem;
 }
@@ -123,7 +182,7 @@ section {
   cursor: pointer;
 }
 
-button[type="submit"] {
+button[type="submit"]{
   background-color: #ff4081;
   color: white;
   padding: 10px 20px;
@@ -249,4 +308,11 @@ button[type="submit"] {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
+}
+
+.login{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px;
 }

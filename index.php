@@ -20,7 +20,7 @@ session_start();
       </div>
       <div class="botoes">
         <div class="cadastro-botao">
-          <button onclick="abrirModal('modal-cadastro')">Cadastrar</button>
+          <button onclick="abrirModal('modal-cadastro',)">Cadastrar</button>
         </div>
         <div class="cadastro-botao">
           <button onclick="abrirModal('modal-entrar')">Entrar</button>
@@ -29,21 +29,26 @@ session_start();
     </div>
     <div class="mania">
       <h2> A MANIA DE SER O <span>MELHOR</span></h2>
+      <a href="link-para-contatos" class="contatos">
+        <img src="imagens/Instragam.png" alt="instagram">
+        <img src="imagens/Whatsapp.png" alt="Whatsapp">
+        <span>Contatos</span>
+      </a>
     </div>
   </header>
 
   <!-- Modal de cadastro -->
   <div id="modal-cadastro" class="modal">
-    <div class="modal-conteudo">
+    <div class="modal-cadastro">
       <span class="fechar" onclick="fecharModal('modal-cadastro')">&times;</span>
       <h2>Cadastre-se para acumular pontos:</h2>
       
       <!-- Mensagem de indicação (opcional) -->
-      <div id="indicacao-info" style="background-color: #4CAF50; color: white; padding: 10px; border-radius: 5px; margin-bottom: 15px; display: none;">
+      <div id="indicacao-info" class= "indicacao" >
         🎉 Você está sendo indicado por um amigo!
       </div>
       
-      <form action="creatusuario.php" method="post">
+      <form action="creatusuario.php" method="post" class="login">
         <label for="nome">Nome:</label><br>
         <input type="text" id="nome" name="nome" required><br><br>
 
@@ -66,10 +71,10 @@ session_start();
 
   <!-- Modal de entrar -->
   <div id="modal-entrar" class="modal">
-    <div class="modal-conteudo">
+    <div class="modal-conteudo-entrar">
       <span class="fechar" onclick="fecharModal('modal-entrar')">&times;</span>
       <h2></h2>
-      <form action="loginusuario.php" method="post">
+      <form action="loginusuario.php" method="post" class="login">
         <label for="celular">celular:</label><br>
         <input type="text" id="celular" name="celular" required><br><br>
 

@@ -1,0 +1,45 @@
+.indicacao{
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px; 
+    border-radius: 5px; 
+    margin-bottom: 15px; 
+    display: none;
+}
+
+.menu-indicacao{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.btn-indicacao {
+    display: inline-block;
+    padding: 4px 20px;
+    background: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 10px 0;
+    margin-left: auto;
+    width: 200px;
+    height: 30px;
+
+}
+
+.btn-indicacao:hover {
+    background: #45a049;
+}
+
+.comissao{
+    margin: 0;
+    background: #4CAF50;
+    color: white;
+    padding: 4px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 200px;
+    height: 30px;
+    margin-left: auto;
+}
